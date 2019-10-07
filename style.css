@@ -26,61 +26,45 @@ body {
   margin:15px;
 }
 
-
-#menu
-{
-	width: 99%;
-	margin: 5px 0px 5px 5px;
-	padding: 10px 0 0 0;
-	list-style: none;  
-	background: #111;
-	background: -moz-linear-gradient(#444, #111); 
-        background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));	
-	background: -webkit-linear-gradient(#444, #111);	
-	background: -o-linear-gradient(#444, #111);
-	background: -ms-linear-gradient(#444, #111);
-	background: linear-gradient(#444, #111);
-	-moz-border-radius: 50px;
-	border-radius: 50px;
-	-moz-box-shadow: 0 2px 1px #9c9c9c;
-	-webkit-box-shadow: 0 2px 1px #9c9c9c;
-	box-shadow: 0 2px 1px #9c9c9c;
-	height:40px;
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1b1b1b;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
 }
 
-#menu li
-{
-	float: left;
-	padding: 0 0 10px 0;
-	position: relative;
-	line-height: 0;
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
 }
 
-#menu a 
-{
-	float: left;
-	height: 25px;
-	padding: 0 25px;
-	color: #999;
-	text-transform: uppercase;
-	font: bold 12px/25px Arial, Helvetica;
-	text-decoration: none;
-	text-shadow: 0 1px 0 #000;
+.sidenav a:hover{
+  color: #f1f1f1;
 }
 
-#menu li:hover > a
-{
-	color: #fafafa;
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
-*html #menu li a:hover /* IE6 */
-{
-	color: #fafafa;
-}
-
-#menu li:hover > ul
-{
-	display: block;
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 
@@ -94,6 +78,7 @@ body {
   display: table;
   clear: both;
 }
+
 
 /* Footer */
 .footer {
