@@ -70,7 +70,7 @@ function answer(x) {
                 return; }
                 /*          COMMAND MENU RESPONSES         */                    
                 else if (question === "!MENU" ) {
-                botSays("\n\n**Commands are !Name yourName, !Bgcolor backgroundColor, !Text textColor, !Menu, !Secrets, !Tutorial, !Botsay textSays, !Me textDoes ,!Search, !Openfb, !Opentw and !Openig, . Play around."); botChat.scrollTop = botChat.scrollHeight;
+                botSays("\n\n**Commands are !Name yourName, !Bgcolor backgroundColor, !Text textColor, !Menu, !Secrets, !Tutorial, !Botsay textSays, !Me textDoes ,!Search termYouWantToSearch, !Openfb, !Opentw, !Openig and !Opensite theSitesURLYouWannaOpen . Play around."); botChat.scrollTop = botChat.scrollHeight;
                 return;
                 }else if (question.slice(0,9).includes("!BGCOLOR ") ) {
                     botSays("\n\n**Changed the background color to " + x.slice(9) ); botChat.scrollTop = botChat.scrollHeight; botChat.style.backgroundColor = x.slice(9);
@@ -109,6 +109,10 @@ function answer(x) {
                 }else if (question.slice(0,10).includes("!OPENIG") ) {
                     botSays("\nBot : I´ll open Instagram for you " + you); botChat.scrollTop = botChat.scrollHeight;
                     window.open('https://www.instagram.com', '_blank');
+                return;
+                }else if (question.slice(0,10).includes("!OPENSITE") ) {
+                    botSays("\nBot : I´ll open Instagram for you " + you); botChat.scrollTop = botChat.scrollHeight;
+                    window.open(x.slice(8), '_blank');
                 return;
                 } else if (question.slice(0,4).includes("!ME") ) {
                     youDo(x.slice(4)); botChat.scrollTop = botChat.scrollHeight;
