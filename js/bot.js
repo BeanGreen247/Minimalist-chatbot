@@ -5,7 +5,7 @@ var Hello = ["HI", "HEY", "HOWDY", "HEYA", "HOLA", "HELLO", "SUP", "KONNICHIWA",
 var Goodbye = ["BYE", "SEE YA", "CYA", "LATER", "ADIOS", "SAYONARA", "SEEYA"]
 var Greeting = ["WHAT'S UP", "HOW'S IT GOING", "HOW ARE YOU", "NICE DAY", "GOOD MORNING", "GOOD NIGHT"]
 var Name = [ "WHAT IS YOUR NAME", "WHAT'S YOUR NAME", "WHO ARE YOU", "WHAT DO THEY CALL YOU", "COMO TE LLAMAS"]
-var Actions = ["HELP", "DRINK", "CHALLENGE"]
+var Actions = ["HELP", "DRINK", "CHALLENGE", "SEARCH"]
 var Questions = ["QUESTION", "QUIZ", "CODE", "ANSWER", "HTML", "CSS", "JAVASCRIPT", "WHO MADE YOU"];
 var HTMLTags1 = ["<P>", "<I>", "<SPAN>", "<DIV>", "<ARTICLE>", "<IFRAME>", "<A>", "<ABBR>","<ADDRESS>","<AUDIO>"];
         // Skip the CMD Line and learn HTML by reading my code!~~ here have fun.
@@ -70,7 +70,7 @@ function answer(x) {
                 return; }
                 /*          COMMAND MENU RESPONSES         */                    
                 else if (question === "!MENU" ) {
-                botSays("\n\n**Commands are !Name yourName, !Bgcolor backgroundColor, !Text textColor, !Menu, !Secrets, !Tutorial, !Botsay textSays, and !Me textDoes,. Play around."); botChat.scrollTop = botChat.scrollHeight;
+                botSays("\n\n**Commands are !Name yourName, !Bgcolor backgroundColor, !Text textColor, !Menu, !Secrets, !Tutorial, !Botsay textSays, !Me textDoes and !Search. Play around."); botChat.scrollTop = botChat.scrollHeight;
                 return;
                 }else if (question.slice(0,9).includes("!BGCOLOR ") ) {
                     botSays("\n\n**Changed the background color to " + x.slice(9) ); botChat.scrollTop = botChat.scrollHeight; botChat.style.backgroundColor = x.slice(9);
@@ -92,6 +92,11 @@ function answer(x) {
                 }
                 else if (question.slice(0,10).includes("!BOTSAY") ) {
                     botSays("\nBot : " + x.slice(8)); botChat.scrollTop = botChat.scrollHeight;
+                return;
+                            /* SEARCH FUNCTION implemented */
+                else if (question.slice(0,10).includes("!SEARCH") ) {
+                    botSays("\nBot : I´ll search for " + x.slice(8)); botChat.scrollTop = botChat.scrollHeight;
+                    window.open('https://www.google.com/search?q='+x.slice(8), '_blank');
                 return;
                 } else if (question.slice(0,4).includes("!ME") ) {
                     youDo(x.slice(4)); botChat.scrollTop = botChat.scrollHeight;
@@ -128,8 +133,7 @@ function answer(x) {
                     
                     
                     
-                    
-                    
+                
                 }else if (question.includes(Actions[i])) {
                     Else = false; if (question.includes("CHALLENGE")) { setTimeout(botSays, 600, "\nBot : Challenge my creator. Go for it.") } else { setTimeout(botSays, 600, "\nBot : How can I help?  Use my commands !Menu & !Tutorial to see what I can do.") }
                 }else if (question.includes(Questions[i])) {
