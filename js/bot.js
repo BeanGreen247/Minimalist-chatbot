@@ -1,5 +1,5 @@
 var you = "User1";
-botSays("Thanks for checking out the minimalist chatbot. \n\nType !name x where x = yourName to change your name.\nTo chat, click Talk to me or press Enter(pc) or Go(android)\nType help for a hint\n\n\n***")
+botSays("Thanks for checking out the Minimalist ChatBot. \n\nType !name x where x = yourName to change your name.\nTo chat, click Talk to me or press Enter(pc) or Go(android)\nType help for a hint\n\n\n***")
             // Recognized Speech Patterns for Question Responses
 var Hello = ["HI", "HEY", "HOWDY", "HEYA", "HOLA", "HELLO", "SUP", "KONNICHIWA", "ALOHA"]
 var Goodbye = ["BYE", "SEE YA", "CYA", "LATER", "ADIOS", "SAYONARA", "SEEYA"]
@@ -111,8 +111,8 @@ function answer(x) {
                     window.open('https://www.instagram.com', '_blank');
                 return;
                 }else if (question.slice(0,10).includes("!OPENSITE") ) {
-                    botSays("\nBot : I´ll open "+x.slice(8)+"  for you " + you); botChat.scrollTop = botChat.scrollHeight;
-                    window.open('//'+x.slice(8), '_blank');
+                    botSays("\nBot : I´ll open "+x.slice(99)+"  for you " + you); botChat.scrollTop = botChat.scrollHeight;
+                    window.open(''+x.slice(99), '_blank');
                 return;
                 } else if (question.slice(0,4).includes("!ME") ) {
                     youDo(x.slice(4)); botChat.scrollTop = botChat.scrollHeight;
