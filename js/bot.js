@@ -1,4 +1,4 @@
-var you = "Me";
+var you = "User1";
 botSays("Thanks for checking out the minimalist chatbot. \n\nType !name x where x = yourName to change your name.\nTo chat, click Talk to me or press Enter(pc) or Go(android)\nType help for a hint\n\n\n***")
             // Recognized Speech Patterns for Question Responses
 var Hello = ["HI", "HEY", "HOWDY", "HEYA", "HOLA", "HELLO", "SUP", "KONNICHIWA", "ALOHA"]
@@ -70,7 +70,7 @@ function answer(x) {
                 return; }
                 /*          COMMAND MENU RESPONSES         */                    
                 else if (question === "!MENU" ) {
-                botSays("\n\n**Commands are !Name yourName, !Bgcolor backgroundColor, !Text textColor, !Menu, !Secrets, !Tutorial, !Botsay textSays, !Me textDoes and !Search. Play around."); botChat.scrollTop = botChat.scrollHeight;
+                botSays("\n\n**Commands are !Name yourName, !Bgcolor backgroundColor, !Text textColor, !Menu, !Secrets, !Tutorial, !Botsay textSays, !Me textDoes ,!Search, !Openfb, !Opentw and !Openig, . Play around."); botChat.scrollTop = botChat.scrollHeight;
                 return;
                 }else if (question.slice(0,9).includes("!BGCOLOR ") ) {
                     botSays("\n\n**Changed the background color to " + x.slice(9) ); botChat.scrollTop = botChat.scrollHeight; botChat.style.backgroundColor = x.slice(9);
@@ -97,6 +97,18 @@ function answer(x) {
                 }else if (question.slice(0,10).includes("!SEARCH") ) {
                     botSays("\nBot : I´ll search for " + x.slice(8)); botChat.scrollTop = botChat.scrollHeight;
                     window.open('https://www.google.com/search?q='+x.slice(8), '_blank');
+                return;
+                }else if (question.slice(0,10).includes("!OPENFB") ) {
+                    botSays("\nBot : I´ll open FaceBook for you " + you); botChat.scrollTop = botChat.scrollHeight;
+                    window.open('https://www.facebook.com', '_blank');
+                return;
+                }else if (question.slice(0,10).includes("!OPENTW") ) {
+                    botSays("\nBot : I´ll open Twitter for you " + you); botChat.scrollTop = botChat.scrollHeight;
+                    window.open('https://www.twitter.com', '_blank');
+                return;   
+                }else if (question.slice(0,10).includes("!OPENIG") ) {
+                    botSays("\nBot : I´ll open Instagram for you " + you); botChat.scrollTop = botChat.scrollHeight;
+                    window.open('https://www.instagram.com', '_blank');
                 return;
                 } else if (question.slice(0,4).includes("!ME") ) {
                     youDo(x.slice(4)); botChat.scrollTop = botChat.scrollHeight;
