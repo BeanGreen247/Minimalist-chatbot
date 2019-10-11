@@ -6,7 +6,7 @@ var Goodbye = ["BYE", "SEE YA", "CYA", "LATER", "ADIOS", "SAYONARA", "SEEYA"]
 var Greeting = ["WHAT'S UP", "HOW'S IT GOING", "HOW ARE YOU", "NICE DAY", "GOOD MORNING", "GOOD NIGHT"]
 var Name = [ "WHAT IS YOUR NAME", "WHAT'S YOUR NAME", "WHO ARE YOU", "WHAT DO THEY CALL YOU", "COMO TE LLAMAS"]
 var Actions = ["HELP", "DRINK", "CHALLENGE"]
-var Questions = ["QUESTION", "QUIZ", "CODE", "ANSWER", "HTML", "CSS", "JAVASCRIPT"];
+var Questions = ["QUESTION", "QUIZ", "CODE", "ANSWER", "HTML", "CSS", "JAVASCRIPT", "WHO MADE YOU"];
 var HTMLTags1 = ["<P>", "<I>", "<SPAN>", "<DIV>", "<ARTICLE>", "<IFRAME>", "<A>", "<ABBR>","<ADDRESS>","<AUDIO>"];
         // Skip the CMD Line and learn HTML by reading my code!~~ here have fun.
 var HTMLTags2 = [
@@ -132,6 +132,8 @@ function answer(x) {
                     
                 }else if (question.includes(Actions[i])) {
                     Else = false; if (question.includes("CHALLENGE")) { setTimeout(botSays, 600, "\nBot : Challenge my creator. Go for it.") } else { setTimeout(botSays, 600, "\nBot : How can I help?  Use my commands !Menu & !Tutorial to see what I can do.") }
+                }else if (question.includes(Questions[i])) {
+                    Else = false; if (question.includes("WHO MADE YOU")) { setTimeout(botSays, 600, "\nBot : So you wanna know something about my creator. Well go to this page why don´t ya. https://beangreen247.github.io/home/") } else { setTimeout(botSays, 600, "\nBot : How can I help?  Use my commands !Menu & !Tutorial to see what I can do.") }
                 } else if (question.includes(Questions[i])) {
                     Else = false; if (Questions[i].includes("HTML")) { setTimeout(botSays, 600, "\nBot : Ask my creator. Go for it. Post your question in the comments, he'll try to help you. I'm just a code, I don't know HOW to code.") } else { setTimeout(botSays, 600, "\nBot : How can I help? Use my commands !Menu & !Tutorial to see what I can do.") }
                 } else if ( question.includes(Greeting[i]) ) {
