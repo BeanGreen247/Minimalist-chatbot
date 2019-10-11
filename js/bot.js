@@ -71,19 +71,19 @@ function answer(x) {
                 /*          COMMAND MENU RESPONSES         */                    
                 else if (question === "!MENU" ) {
                 botSays("\n\nCommands are " +
-                        "\n           !Name yourName " +
-                        "\n           !Bgcolor backgroundColor " +
-                        "\n           !Text textColor " +
-                        "\n           !Menu " +
-                        "\n           !Secrets " +
-                        "\n           !Tutorial " +
-                        "\n           !Botsay textSays " +
-                        "\n           !Me textDoes " + 
-                        "\n           !Search termYouWantToSearch " +
-                        "\n           !Openfb " +
-                        "\n           !Opentw " + 
-                        "\n           !Openig " + 
-                        "\n           !Opensite theSitesURLYouWannaOpen " + 
+                        "\n           !Name yourName - changes users name" +
+                        "\n           !Bgcolor backgroundColor - changes background color" +
+                        "\n           !Text textColor  - changes text color" +
+                        "\n           !Menu - opens this menu" +
+                        "\n           !Secrets - top secret" +
+                        "\n           !Tutorial - opens tutorial" +
+                        "\n           !Botsay textSays - makes the bot say what you type" +
+                        "\n           !Me textDoes - shows typed text as if you said it" + 
+                        "\n           !Search termYouWantToSearch - searcher a term using Google Search" +
+                        "\n           !Openfb - opens Facebook" +
+                        "\n           !Opentw - opens Twitter" + 
+                        "\n           !Openig - opens Instagram" + 
+                        "\n           !Opensite theSitesURLYouWannaOpen - opens typed URL" + 
                         "\n"); botChat.scrollTop = botChat.scrollHeight;
                 return;
                 }else if (question.slice(0,9).includes("!BGCOLOR ") ) {
