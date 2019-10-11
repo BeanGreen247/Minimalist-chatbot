@@ -111,7 +111,7 @@ function answer(x) {
                     window.open('https://www.instagram.com', '_blank');
                 return;
                 }else if (question.slice(0,10).includes("!OPENSITE") ) {
-                    botSays("\nBot : I´ll open "+x.slice(99)+"  for you " + you); botChat.scrollTop = botChat.scrollHeight;
+                    botSays("\nBot : I´ll open "+x.slice(1,0)+"  for you " + you); botChat.scrollTop = botChat.scrollHeight;
                     window.open(x.slice(1,0), '_blank');
                 return;
                 } else if (question.slice(0,4).includes("!ME") ) {
