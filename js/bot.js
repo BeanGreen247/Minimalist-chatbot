@@ -112,7 +112,7 @@ function answer(x) {
                 return;
                 }else if (question.slice(0,10).includes("!OPENSITE") ) {
                     botSays("\nBot : I´ll open "+x.slice(10)+"  for you " + you); botChat.scrollTop = botChat.scrollHeight;
-                    window.open('//' + x.slice(10), '_blank');
+                    window.open('//'+x.slice(10), '_blank');
                 return;
                 } else if (question.slice(0,4).includes("!ME") ) {
                     youDo(x.slice(4)); botChat.scrollTop = botChat.scrollHeight;
