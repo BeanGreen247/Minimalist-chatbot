@@ -70,20 +70,20 @@ function answer(x) {
                 return; }
                 /*          COMMAND MENU RESPONSES         */                    
                 else if (question === "!MENU" ) {
-                botSays("\n\nCommands are 
-                        "\n           !Name yourName
-                        "\n           !Bgcolor backgroundColor
-                        "\n           !Text textColor
-                        "\n           !Menu
-                        "\n           !Secrets
-                        "\n           !Tutorial 
-                        "\n           !Botsay textSays
-                        "\n           !Me textDoes 
-                        "\n           !Search termYouWantToSearch
-                        "\n           !Openfb
-                        "\n           !Opentw 
-                        "\n           !Openig 
-                        "\n           !Opensite theSitesURLYouWannaOpen 
+                botSays("\n\nCommands are " +
+                        "\n           !Name yourName " +
+                        "\n           !Bgcolor backgroundColor " +
+                        "\n           !Text textColor " +
+                        "\n           !Menu " +
+                        "\n           !Secrets " +
+                        "\n           !Tutorial " +
+                        "\n           !Botsay textSays " +
+                        "\n           !Me textDoes " + 
+                        "\n           !Search termYouWantToSearch " +
+                        "\n           !Openfb " +
+                        "\n           !Opentw " + 
+                        "\n           !Openig " + 
+                        "\n           !Opensite theSitesURLYouWannaOpen " + 
                         "\n"); botChat.scrollTop = botChat.scrollHeight;
                 return;
                 }else if (question.slice(0,9).includes("!BGCOLOR ") ) {
