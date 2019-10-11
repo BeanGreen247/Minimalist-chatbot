@@ -70,7 +70,21 @@ function answer(x) {
                 return; }
                 /*          COMMAND MENU RESPONSES         */                    
                 else if (question === "!MENU" ) {
-                botSays("\n\n**Commands are !Name yourName, !Bgcolor backgroundColor, !Text textColor, !Menu, !Secrets, !Tutorial, !Botsay textSays, !Me textDoes ,!Search termYouWantToSearch, !Openfb, !Opentw, !Openig and !Opensite theSitesURLYouWannaOpen . Play around."); botChat.scrollTop = botChat.scrollHeight;
+                botSays("\n\nCommands are 
+                        "\n           !Name yourName
+                        "\n           !Bgcolor backgroundColor
+                        "\n           !Text textColor
+                        "\n           !Menu
+                        "\n           !Secrets
+                        "\n           !Tutorial 
+                        "\n           !Botsay textSays
+                        "\n           !Me textDoes 
+                        "\n           !Search termYouWantToSearch
+                        "\n           !Openfb
+                        "\n           !Opentw 
+                        "\n           !Openig 
+                        "\n           !Opensite theSitesURLYouWannaOpen 
+                        "\n"); botChat.scrollTop = botChat.scrollHeight;
                 return;
                 }else if (question.slice(0,9).includes("!BGCOLOR ") ) {
                     botSays("\n\n**Changed the background color to " + x.slice(9) ); botChat.scrollTop = botChat.scrollHeight; botChat.style.backgroundColor = x.slice(9);
