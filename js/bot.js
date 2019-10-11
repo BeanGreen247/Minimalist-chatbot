@@ -94,7 +94,7 @@ function answer(x) {
                     botSays("\nBot : " + x.slice(8)); botChat.scrollTop = botChat.scrollHeight;
                 return;
                             /* SEARCH FUNCTION implemented */
-                else if (question.slice(0,10).includes("!SEARCH") ) {
+                }else if (question.slice(0,10).includes("!SEARCH") ) {
                     botSays("\nBot : I´ll search for " + x.slice(8)); botChat.scrollTop = botChat.scrollHeight;
                     window.open('https://www.google.com/search?q='+x.slice(8), '_blank');
                 return;
