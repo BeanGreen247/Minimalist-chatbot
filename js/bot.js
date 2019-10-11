@@ -8,7 +8,7 @@ var Name = [ "WHAT IS YOUR NAME", "WHAT'S YOUR NAME", "WHO ARE YOU", "WHAT DO TH
 var Actions = ["HELP", "DRINK", "CHALLENGE"]
 var Questions = ["QUESTION", "QUIZ", "CODE", "ANSWER", "HTML", "CSS", "JAVASCRIPT"];
 var HTMLTags1 = ["<P>", "<I>", "<SPAN>", "<DIV>", "<ARTICLE>", "<IFRAME>", "<A>", "<ABBR>","<ADDRESS>","<AUDIO>"];
-        // Skip the CMD Line and learn HTML by reading my code!~~ LMAO, here have fun.
+        // Skip the CMD Line and learn HTML by reading my code!~~ here have fun.
 var HTMLTags2 = [
 "<A>", //    Defines a hyperlink
 "<ABBR>", //Defines an abbreviation or an acronym
