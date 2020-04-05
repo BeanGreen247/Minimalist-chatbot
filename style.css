@@ -1,107 +1,256 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: Arial;
-  padding: 20px;
-  /*background: #00FF77;*/
-  margin: auto;
-  height: auto;
-  background-color: #1b1b1b;
-  max-height: auto;
-  max-width: auto;
+header {
+  text-align: left;
+  font-weight: 800;
+  font-size: 28px;
+  border-bottom: solid 3px #DEDEDE;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Header/Blog Title */
-.header {
-  padding: 15px;
-  font-size: 20px;
-  text-align: center;
-  background: transparent;
-  color:white;
-}
-.text {
-  text-align: center;
-  color:white;
-  margin:15px;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #1b1b1b;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  text-align:center;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+footer {
   display: block;
-  transition: 0.3s;
-
-}
-
-.sidenav a:hover{
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-/*.active {
-  background-color: #4CAF50;
-}*/
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-/* Footer */
-.footer {
-  bottom:0;
-  min-height:0%;
   text-align: center;
-  background: transparent;
+  padding: 5px 20px;
+  padding-bottom: 0px;
+}
+
+.headers {
+  margin-top: 1%;
+  margin-bottom: -1%;
+  font-size: 20px;
+}
+
+#list-head {
+  margin-left: 2.5%;
+  width: 30.5%;
+  display: inline-block;
+  text-align: center;
+}
+
+#note-head {
+  width: 60%;
+  margin-left: 5%;
+  display: inline-block;
+  text-align: center;
+}
+
+noteList {
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 1.5%;
+  margin-right: 1%;
+  width: 30.5%;
+  height: 700px;
+  overflow: scroll;
+  border: solid 3px #929292;
+  background-color: #DEDEDE;
+}
+
+.within-list {
+  cursor: pointer;
+}
+
+.list-title {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px 5px 0 5px;
+}
+
+.list-date {
+  font-weight: 200;
+  font-style: italic;
+  font-size: 12px;
+  padding: 0 5px 0 5px;
+}
+
+.list-text {
+  padding: 0 5px 5px 5px;
+  border-bottom: solid 1px black;
+}
+
+.list-title1 {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px 5px 0 5px;
+}
+
+.list-date1 {
+  font-weight: 200;
+  font-style: italic;
+  font-size: 12px;
+  padding: 0 5px 0 5px;
+}
+
+.list-text1 {
+  padding: 0 5px 5px 5px;
+  border-bottom: solid 1px black;
+}
+
+.list-title2 {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px 5px 0 5px;
+}
+
+.list-date2 {
+  font-weight: 200;
+  font-style: italic;
+  font-size: 12px;
+  padding: 0 5px 0 5px;
+}
+
+.list-text2 {
+  padding: 0 5px 5px 5px;
+  border-bottom: solid 1px black;
+}
+notePad {
+  display: inline-block;
+  border: solid 3px black;
+  height: 700px;
+  overflow: scroll;
+  width: 85%;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+#note-title {
+  font-size: 24px;
+  padding: 0 0 5px 5px;
+  border-bottom: solid 2px #DEDEDE;
+}
+
+#note-body {
+  padding: 5px;
+}
+
+#body-field, #title-field {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+#title-field {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#body-field {
+  font-size: 14px;
+  font-weight: 500;
+  height: 400px;
+}
+
+#color-select {
+  display: inline-flex;
+  flex-flow: row;
+  text-align: center;
+}
+
+.color-box {
+  border: solid 2px #929292;
+  height: 10px;
+  width: 10px;
+  margin-left: 5px;
+}
+
+.display {
+  display: visible;
+}
+
+.no-display {
+  display: none;
+}
+
+.navBar {
+  text-align: center;
+  padding: 15px; }
+  .navBar a h2 {
+    font-size: 30px;
+    font-family: "Lato", sans-serif;
+    display: inline;
+    padding: 10px;
+    color: #b3b3b3; }
+
+button {
+  margin: 5px;
+  border: solid 3px black;
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #DEDEDE;
+  height: 50px;
+  width: 100px;
+}
+
+button:hover, .color-box:hover {
+  cursor: pointer;
+}
+
+#listed:nth-child(odd):hover {
+  cursor: pointer;
+}
+
+#listed1:nth-child(odd):hover {
+  cursor: pointer;
+}
+
+#listed2:nth-child(odd):hover {
+  cursor: pointer;
+}
+
+#btn-mvtoeditor {
+  float: none;
+  text-align: center;
   color:white;
+  background-color: #0033cc;
 }
-#container {
-   min-height:100%;
-   position:relative;
+
+#btn-rtrntnts {
+  background-color: #0033cc;
 }
-html, body {
-  margin: 0px;
-  padding: 0px;
-  min-height: 100%;
-  height: 100%;
+
+#btn-new {
+  background-color: #0033cc;
 }
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
+
+#btn-save {
+  background-color: #2F5032;
+}
+
+#btn-save1 {
+  background-color: #2F5032;
+}
+
+#btn-save2 {
+  background-color: #2F5032;
+}
+
+#btn-delete {
+  background-color: #E41A36;
+}
+
+.white {
+  background-color: white;
+  height: 25px;
+  width: 25px;
+}
+
+
+.aqua {
+  background-color: #79FBD6;
+  height: 25px;
+  width: 25px;
+}
+
+.ice {
+  background-color: #79FDFE;
+  height: 25px;
+  width: 25px;
+}
+
+.sky {
+  background-color: #7AD6FD;
+  height: 25px;
+  width: 25px;
 }
